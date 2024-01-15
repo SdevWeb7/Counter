@@ -1,0 +1,63 @@
+$color1: hsl(237, 18%, 59%);
+$color1: hsl(345, 95%, 68%);
+$color1: hsl(236, 21%, 26%);
+$color1: hsl(235, 16%, 14%);
+$color1: hsl(234, 17%, 12%);
+
+@import "compteur";
+
+@font-face {
+  font-family: 'Red Hat Text';
+  src: url("/public/RedHatText-VariableFont_wght.ttf")format('truetype');
+}
+
+html {
+  font-family: "Red Hat Text";
+  background: linear-gradient(180deg, #1D1E28 0.12%, #261C2D 94.84%, #261A2D 100%) no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+body {
+  min-height: 70vh;
+  background-image: url("/public/images/bg-stars.svg");
+  background-size: cover;
+  z-index: -2;
+}
+h1 {
+  color: #FFF;
+  text-align: center;
+  font-family: Red Hat Text;
+  font-size: 1.375rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.46875rem;
+  text-transform: uppercase;
+  margin-top: 8.25rem;
+  margin-bottom: 6.5rem;
+}
+footer {
+  height: 12.25rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-image: url("/public/images/pattern-hills.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 50px);
+  justify-content: center;
+  align-items: end;
+  z-index: 1;
+
+  & > * {
+    margin-bottom: 4rem;
+    cursor: pointer;
+    color: #8385A9;
+
+    &:hover {
+      color: #FB5E84;
+    }
+  }
+}

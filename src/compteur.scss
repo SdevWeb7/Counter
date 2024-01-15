@@ -1,0 +1,80 @@
+.compteur {
+  display: grid;
+  grid-template-columns: repeat(4, 9.25rem);
+  justify-content: center;
+  padding-bottom: 40px;
+  column-gap: 2rem;
+}
+
+.number {
+  position: relative;
+  background-image: url("/public/images/bg-numbers.svg");
+  background-repeat: no-repeat;
+  z-index: 1000;
+  border-radius: .25rem;
+  perspective: 800px;
+
+  .circle1 {
+    position: absolute;
+    left: 0;
+    top: 35%;
+    transform-origin: center;
+    transform: rotate(180deg);
+  }
+  .circle2 {
+    position: absolute;
+    right: 0;
+    top: 35%;
+  }
+
+  .background-black {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 61%;
+    background: black;
+    opacity: 0.1506;
+    transform-origin: bottom;
+  }
+}
+
+h2 {
+  color: #FB5E84;
+  text-align: center;
+  font-family: Red Hat Text;
+  font-size: 5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 4.4375rem; /* 88.75% */
+  letter-spacing: -0.15rem;
+  margin: 0 0 0;
+  padding: 2.12rem 0 3.81rem 0;
+}
+p {
+  color: #8385A9;
+  text-align: center;
+  font-family: Red Hat Text;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.36994rem;
+  margin: 0;
+}
+
+@media only screen and (max-width: 700px) {
+  h1 {
+    margin: 6rem 4rem !important;
+  }
+  h2 {
+    font-size: 2.25rem;
+  }
+  p {
+    font-size: 0.5rem;
+  }
+  .compteur {
+    grid-template-columns: repeat(4, 70px);
+    gap: 1rem;
+  }
+}
